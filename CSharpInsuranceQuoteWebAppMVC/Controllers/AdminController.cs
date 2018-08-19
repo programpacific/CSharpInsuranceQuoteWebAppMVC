@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using CSharpInsuranceQuoteWebAppMVC.Models;
 using CSharpInsuranceQuoteWebAppMVC.ViewModels;
@@ -23,6 +21,7 @@ namespace CSharpInsuranceQuoteWebAppMVC.Controllers
                     estimateVM.LName = quote.LName;
                     estimateVM.EAddress = quote.EAddress;
                     estimateVM.Estimation = (int)quote.Estimation;
+
                     EstimateVMs.Add(estimateVM);
                 }
                 return View(EstimateVMs);
