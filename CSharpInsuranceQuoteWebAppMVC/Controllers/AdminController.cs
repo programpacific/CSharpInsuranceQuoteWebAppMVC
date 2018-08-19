@@ -10,7 +10,6 @@ namespace CSharpInsuranceQuoteWebAppMVC.Controllers
 {
     public class AdminController : Controller
     {
-        // GET: Admin
         public ActionResult Index()
         {
             using (EstimateEntities db = new EstimateEntities())
