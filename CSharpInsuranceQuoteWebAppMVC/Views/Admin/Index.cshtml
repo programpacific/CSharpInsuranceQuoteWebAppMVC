@@ -1,0 +1,56 @@
+﻿@using CSharpInsuranceQuoteWebAppMVC.ViewModels
+@model List<EstimateVM>
+
+<div class="row no-gutters m-3">
+    <div class="card col-sm-12 col-md-10 col-lg-10 mx-auto shadow">
+        <div class="card-header text-center font-italic">
+            <h1>Oregon Code</h1>
+            <h2 class="m-0">Sales Agent Lead Page</h2>
+            <br>
+            <h5> Here you can see the quote requests saved to the database!</h5>
+            <p>Reach out to our customer base to finalize the deal!</p>
+        </div>
+
+
+        <div class="card-body">
+
+            @foreach (var quote in Model)
+            {
+                <input type="hidden" name="Id" value="@quote.Id" />
+                <div class="row mb-3">
+                    <div class="col mb-3">
+                        Reference # <br>
+                        @quote.Id
+                    </div>
+                    <div class="col mb-3">
+                        First Name <br>
+                        @quote.FName
+                    </div>
+                    <div class="col">
+                        Last Name <br>
+                        @quote.LName
+                    </div>
+                    <div class="col">
+                        Email Address <br>
+                        @quote.EAddress
+                    </div>
+                    <div class="col">
+                        Estimated Quote <br>
+                        @quote.Estimation
+                    </div>
+                </div>
+            }
+                
+                <div class="text-center">
+                    <h1>Thank you for visiting the Admin HQ!</h1>
+                    <br>
+                    <h2>LETS SELL SOME INSURANCE!</h2>
+
+
+                    <a class="mt-4 btn-block btn-dark" href="https://www.dmv.org/compare-car-insurance.php">DMV Insurance Estimator</a>
+                    <a class="mt-1 btn-block btn-info" href="#">Back To The Top</a>
+                </div>
+
+        </div>
+    </div>
+</div>
