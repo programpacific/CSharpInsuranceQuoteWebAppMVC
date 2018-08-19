@@ -79,7 +79,7 @@ namespace CSharpInsuranceQuoteWebAppMVC.Controllers
                         quote.Estimation = (int)priceCalc;
 
                         db.Quotes.Add(quote);
-                        db.SaveChanges();
+                        db.SaveChanges(); 
                     }
                     return View("Success");
                 }
